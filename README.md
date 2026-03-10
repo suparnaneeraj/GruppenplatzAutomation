@@ -17,9 +17,9 @@ The test is currently executed using Chromium, but the framework can easily be e
 
 ## Project Structure
 
-• `/tests` - Contains the sample tests verifying search with valid and invalid inputs
-• `/pages` - Contains all the Page Objects with locators and implementation methods for the respective pages
-• `/test-data` -  Contains the test data required for the search functionality
+- `/tests` - Contains the sample tests verifying search with valid and invalid inputs
+-  `/pages` - Contains all the Page Objects with locators and implementation methods for the respective pages
+-   `/test-data` -  Contains the test data required for the search functionality
 
 ## Running the Tests
 
@@ -61,9 +61,9 @@ All locators and page interactions are centralized in Page Objects. This ensures
 ### 2. Small Reusable Methods
 
 Page Object methods are designed as small reusable actions, such as:
-•	entering search input
-•	selecting dropdown suggestions
-•	retrieving results
+- entering search input
+- selecting dropdown suggestions
+- retrieving results
 This allows different test scenarios to reuse the same building blocks.
 
 ### 3. Test Data Separation
