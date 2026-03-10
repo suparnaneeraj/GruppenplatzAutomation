@@ -9,9 +9,9 @@ The goal of this challenge was to explore the component and demonstrate an appro
 ## Tech Stack
 
 The automation is implemented using:
-•	Playwright
-•	TypeScript
-•	Page Object Model
+- Playwright
+- TypeScript
+- Page Object Model
 
 The test is currently executed using Chromium, but the framework can easily be extended to run on other browsers.
 
