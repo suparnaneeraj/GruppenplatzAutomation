@@ -25,9 +25,9 @@ The test is currently executed using Chromium, but the framework can easily be e
 
 ### 1. Clone the repository
 
-git clone <repository-url>
+git clone repository-url
 
-cd <repository-folder>
+cd repository-folder
 
 ### 2. Install dependencies
 
@@ -45,7 +45,7 @@ npx playwright test
 
 npx playwright show-report
 
-### 6. To run the test in playwright UI mode
+### 6. To run the tests in Playwright UI mode
 
 npx playwright test --ui
 
