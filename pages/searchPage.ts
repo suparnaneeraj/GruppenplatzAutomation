@@ -27,13 +27,15 @@ export class SearchPage {
 
     }
 
-    async enterSearchInput(postalCode: string){
+    //This method is to enter an input in the search input field
+    async enterSearchInput(searchInput: string){
         await this.searchInputField.scrollIntoViewIfNeeded();
         await this.searchInputField.clear();
         await this.searchInputField.click();
-        await this.searchInputField.fill(postalCode);
+        await this.searchInputField.fill(searchInput);
     }
 
+    //This method is to select an option from the suggestions dropdown
     async selectSuggestionFromDropdown(suggestion? : string){
         let option: Locator;
         if(suggestion){
@@ -46,6 +48,7 @@ export class SearchPage {
             await option.click();
     }
 
+    //This method is to wait for the cookies modal to be displayed and then accept the cookies by clicking Accept button 
     async acceptCookies() {
         await this.acceptCookiesButton.waitFor({'state':'visible'});
         await this.acceptCookiesButton.click();
@@ -53,21 +56,25 @@ export class SearchPage {
         
     }
 
+    //This method is to click the Search button
     async submitSearch(){
         await this.searchButton.click();
     }
 
+    //This method is to fetch the total results count and the items in the first page of the list once the search is performed
     async getListResultsCountAndItem() {
         await expect(this.listResultsCount).toBeVisible();
         await expect(this.listItem.first()).toBeVisible();
         return [this.listResultsCount, this.listItem];
     }
 
+    //This method is to get the markers in the map after search is performed
     async getMapMarkers() {
         await this.mapMarkers.first().waitFor({ 'state': 'visible' });
         return this.mapMarkers;
     }
 
+    //This method is to get the error message when a search is performed with an invalid input
     getErrorMessage(){
         return this.invalidSearchErrorMessage;
     }
